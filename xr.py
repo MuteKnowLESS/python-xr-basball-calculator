@@ -40,6 +40,7 @@ def print_results(name, year, team, stats, xr, position=None, pitcher_mode=False
     if pitcher_mode:
         print(f"  Mode   : Pitcher — stats are vs. batters faced")
     print(f"{'='*45}")
+    print(f"  G      : {int(stats.get('G', 0))}")
     print(f"  AB     : {int(stats.get('AB', 0))}")
     print(f"  1B     : {int(singles)}")
     print(f"  2B     : {int(stats.get('2B', 0))}")
@@ -58,6 +59,7 @@ def print_results(name, year, team, stats, xr, position=None, pitcher_mode=False
     if pitcher_mode:
         print(f"  XR     : {xr:.1f}  (runs allowed estimate)")
     else:
+        print(f"  R      : {int(stats.get('R', 0))}")
         print(f"  XR     : {xr:.1f}")
     print(f"{'='*45}\n")
 
@@ -69,6 +71,7 @@ MLB_HITTING_MAP = {
     "hitByPitch": "HBP", "strikeOuts": "SO", "stolenBases": "SB",
     "caughtStealing": "CS", "groundIntoDoublePlay": "GIDP",
     "sacFlies": "SF", "sacBunts": "SH",
+    "gamesPlayed": "G", "runs": "R",
 }
 
 # Pitching splits use different field names for the same concepts
@@ -178,6 +181,8 @@ def try_bbref(player_name: str, year: int):
 
     row = matches.iloc[0]
     stats = row.to_dict()
+    # Normalise BBRef field names
+    stats["GIDP"] = stats.get("GDP", 0)
     team = stats.get("Tm", "N/A")
     return row["Name"], team, stats, None, False
 

@@ -19,7 +19,7 @@ for best hitters.
 or
 
 ```bash
-python xr.py '<player name>' <year>
+python xr.py "<player name>" <year>
 ```
 for specific player stats
 

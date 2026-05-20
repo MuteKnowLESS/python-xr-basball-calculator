@@ -2,6 +2,11 @@ caclulates the XR of baseball players given a name and season year. example inpu
 
 Data from pybaseball and the MLB api
 
+## Dependancies
+
+Code tested with python 3.14.4 venv. 
+Requiremnts provided. use: `pip install -r requirements.txt` to install them.
+
 ## xr.py
 
 this script takes a player name and year and gives an out put of their statistics. a --prediction <optional: year> can be used to predict the runs and value of the player for the current year or the year after the year provided when running the program

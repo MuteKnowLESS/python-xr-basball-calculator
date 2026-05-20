@@ -2,6 +2,20 @@ caclulates the XR of baseball players given a name and season year. example inpu
 
 Data from pybaseball and the MLB api
 
+## Quick Start
+
+```bash
+git clone https://github.com/MuteKnowLESS/python-xr-basball-calculator.git
+cd python-xr-basball-calculator
+pip install -r requirements.txt
+```
+than run with the following:
+`python best_hitter.py` for best hitters.
+
+or
+
+`python xr.py '<player name>' <year>` for specific player stats
+
 ## Dependancies
 
 Code tested with python 3.14.4 venv. 

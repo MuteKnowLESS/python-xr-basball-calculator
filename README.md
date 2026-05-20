@@ -10,11 +10,18 @@ cd python-xr-basball-calculator
 pip install -r requirements.txt
 ```
 than run with the following:
-`python best_hitter.py` for best hitters.
+
+```bash
+python best_hitter.py
+```
+for best hitters.
 
 or
 
-`python xr.py '<player name>' <year>` for specific player stats
+```bash
+python xr.py '<player name>' <year>
+```
+for specific player stats
 
 ## Dependancies
 

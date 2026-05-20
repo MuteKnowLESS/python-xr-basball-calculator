@@ -5,7 +5,9 @@ Data from pybaseball and the MLB api
 ## Dependancies
 
 Code tested with python 3.14.4 venv. 
-Requiremnts provided. use: `pip install -r requirements.txt` to install them.
+Dependancies provided in requirements.txt. 
+
+use: `pip install -r requirements.txt` to install them.
 
 ## xr.py
 
